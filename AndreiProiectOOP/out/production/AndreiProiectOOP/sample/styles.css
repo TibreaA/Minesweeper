@@ -1,0 +1,4 @@
+.gridPane {
+	-fx-background-fill: black, white ;
+    -fx-background-insets: 2, 2 ;
+}

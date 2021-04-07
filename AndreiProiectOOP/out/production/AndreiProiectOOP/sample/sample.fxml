@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="borderPane" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <top>
+        <VBox>
+            <ToolBar>
+                    <MenuBar>
+                        <Menu text="Levels...">
+                            <items>
+                                <MenuItem onAction="#setEasy" text="Easy" />
+                                <SeparatorMenuItem />
+                                <MenuItem onAction="#setMedium" text="Medium" />
+                                <SeparatorMenuItem />
+                                <MenuItem onAction="#setHard" text="Hard" />
+                            </items>
+                        </Menu>
+                        <Menu text="Help">
+                            <items>
+                                <MenuItem onAction="#pageWeb" text="Info" />
+                            </items>
+                        </Menu>
+                    </MenuBar>
+            </ToolBar>
+        </VBox>
+    </top>
+    <center>
+        <VBox>
+            <ToolBar>
+                <HBox fx:id="box" spacing="40" BorderPane.alignment="CENTER">
+                    <TextField fx:id="mines" alignment="CENTER">
+                  <HBox.margin>
+                     <Insets left="10.0" />
+                  </HBox.margin></TextField>
+                    <Button fx:id="newGame" alignment="CENTER" onMouseClicked="#newGame" />
+                    <TextField fx:id="time" alignment="CENTER">
+                  <HBox.margin>
+                     <Insets right="10.0" />
+                  </HBox.margin></TextField>
+                </HBox>
+            </ToolBar>
+            <GridPane fx:id="gridPane" onMouseClicked="#handleClickGridPane" VBox.vgrow="ALWAYS">
+
+            </GridPane>
+        </VBox>
+    </center>
+</BorderPane>
